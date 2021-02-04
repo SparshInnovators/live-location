@@ -37,6 +37,7 @@ open class GetLocationCoordinates {
             mLocationRequest.interval = 2000
             mLocationRequest.fastestInterval = 1000
             mLocationRequest.smallestDisplacement = 0f
+            alertCounter = 0;
 
             rxPermissions = RxPermissions(activity)
             rxPermissions!!.request(
@@ -46,7 +47,6 @@ open class GetLocationCoordinates {
             )
                 .subscribe(Consumer { granted: Boolean ->
                     if (granted) {
-
                         /*Got all the permissions here*/
                         getLocation(context)
 
@@ -59,7 +59,7 @@ open class GetLocationCoordinates {
                                 )
                             ) {
                                 if (alertCounter == 0) {
-                                    alertCounter++;
+                                    alertCounter++
                                     AlertDialog.Builder(activity)
                                         .setTitle("Error")
                                         .setMessage("We need all the permissions")
@@ -73,7 +73,10 @@ open class GetLocationCoordinates {
                                         }
                                         .setNegativeButton(
                                             "Cancel"
-                                        ) { dialog: DialogInterface?, which: Int -> false }
+                                        ) { dialog: DialogInterface?, which: Int ->
+                                            alertCounter = 0
+                                            false
+                                        }
                                         .create()
                                         .show()
                                 }
