@@ -14,7 +14,7 @@
   **Step 2:**
   ```
   dependencies {
-	        implementation 'com.github.SparshInnovators:live-location:1.0.5'
+	        implementation 'com.github.SparshInnovators:live-location:1.0.7'
 	}
   ```
   **Step 3:**
@@ -31,5 +31,15 @@ GetLocationCoordinates.locationMutableLiveData.observe(this, Observer { location
             //Your location is here
         })
 ```
-  
+
+**Step 5:**
+You can unregister the livedata in the owner
+```
+override fun onDestroy() {
+        super.onDestroy()
+        GetLocationCoordinates.locationMutableLiveData.removeObservers(this@MainActivity)
+    }
+```
+
+***NOTE : ALWAYS PASS ACTIVITY CONTEXT WHEREEVER ACTIVITY SPECIFIC TASK IS PERFORMED***
   
