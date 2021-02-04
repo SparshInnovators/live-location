@@ -25,6 +25,7 @@ open class GetLocationCoordinates {
     companion object {
         var mLocationRequest = LocationRequest.create()
         var locationMutableLiveData = MutableLiveData<Location>()
+        var alertCounter = 0
 
         private var rxPermissions: RxPermissions? = null
         private val permissions = arrayOf(
@@ -57,22 +58,25 @@ open class GetLocationCoordinates {
                                     permission
                                 )
                             ) {
-                                AlertDialog.Builder(activity)
-                                    .setTitle("Error")
-                                    .setMessage("We need all the permissions")
-                                    .setPositiveButton(
-                                        "Allow"
-                                    ) { dialog: DialogInterface?, which: Int ->
-                                        getNewLocation(
-                                            context,
-                                            activity
-                                        )
-                                    }
-                                    .setNegativeButton(
-                                        "Cancel"
-                                    ) { dialog: DialogInterface?, which: Int -> false }
-                                    .create()
-                                    .show()
+                                if (alertCounter == 0) {
+                                    alertCounter++;
+                                    AlertDialog.Builder(activity)
+                                        .setTitle("Error")
+                                        .setMessage("We need all the permissions")
+                                        .setPositiveButton(
+                                            "Allow"
+                                        ) { dialog: DialogInterface?, which: Int ->
+                                            getNewLocation(
+                                                context,
+                                                activity
+                                            )
+                                        }
+                                        .setNegativeButton(
+                                            "Cancel"
+                                        ) { dialog: DialogInterface?, which: Int -> false }
+                                        .create()
+                                        .show()
+                                }
                             }
                         }
                     }
