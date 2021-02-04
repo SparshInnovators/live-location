@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "225378993197",
+    "firebase_url": "https://eloquentconnect.firebaseio.com",
+    "project_id": "eloquentconnect",
+    "storage_bucket": "eloquentconnect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225378993197:android:1a5f2d146c6d2183aca4a4",
+        "android_client_info": {
+          "package_name": "com.camera.sparsh.livelocation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225378993197-u1qh9uvqabvgdikma842rc9d6plst5dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAViDM11q1Qt7jh4wUE4tzMUKXl9KQe_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225378993197-u1qh9uvqabvgdikma842rc9d6plst5dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,3 @@
+include ':currentlocation'
+include ':app'
+rootProject.name = "LiveLocation"
