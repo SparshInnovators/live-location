@@ -26,7 +26,8 @@
   **Step 4:**
   Listen to the MutableLiveData, which will be called everytime the new location is received.
   
-``` GetLocationCoordinates.locationMutableLiveData.observe(this, Observer { location ->
+```
+GetLocationCoordinates.locationMutableLiveData.observe(this, Observer { location ->
             //Your location is here
         })
 ```
