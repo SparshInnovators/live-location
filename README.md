@@ -20,7 +20,7 @@
   **Step 3:**
   Get the location from **```GetLocationCoordinates()```**
   ```
-  GetLocationCoordinates.getNewLocation(applicationContext, this@MainActivity)
+  GetLocationCoordinates.getNewLocation(applicationContext, this)
   ```
   
   **Step 4:**
