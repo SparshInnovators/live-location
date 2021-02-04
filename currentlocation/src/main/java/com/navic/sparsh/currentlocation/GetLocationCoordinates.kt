@@ -37,7 +37,7 @@ open class GetLocationCoordinates {
             mLocationRequest.interval = 2000
             mLocationRequest.fastestInterval = 1000
             mLocationRequest.smallestDisplacement = 0f
-            alertCounter = 0;
+            alertCounter = 0
 
             rxPermissions = RxPermissions(activity)
             rxPermissions!!.request(
