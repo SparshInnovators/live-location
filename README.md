@@ -1,6 +1,7 @@
 # live-location
 
 This library will only fetch the coordinated and check for the permissions. If the permission if not granted then it will ask for the permission. GPS activation dialog box is not implemented.
+
 **Step 1** :
 
 ```
