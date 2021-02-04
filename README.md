@@ -14,7 +14,7 @@
   **Step 2:**
   ```
   dependencies {
-	        implementation 'com.github.SparshInnovators:live-location:1.0.3'
+	        implementation 'com.github.SparshInnovators:live-location:1.0.4'
 	}
   ```
   **Step 3:**
