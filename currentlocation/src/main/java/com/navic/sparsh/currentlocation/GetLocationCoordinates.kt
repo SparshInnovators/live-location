@@ -24,7 +24,7 @@ import io.reactivex.functions.Consumer
 open class GetLocationCoordinates {
     companion object {
         var mLocationRequest = LocationRequest.create()
-        lateinit var locationMutableLiveData: MutableLiveData<Location>
+        var locationMutableLiveData = MutableLiveData<Location>()
 
         private var rxPermissions: RxPermissions? = null
         private val permissions = arrayOf(
@@ -33,7 +33,6 @@ open class GetLocationCoordinates {
         )
 
         fun getNewLocation(context: Context, activity: Activity) {
-            locationMutableLiveData = MutableLiveData()
             mLocationRequest.interval = 2000
             mLocationRequest.fastestInterval = 1000
             mLocationRequest.smallestDisplacement = 0f
