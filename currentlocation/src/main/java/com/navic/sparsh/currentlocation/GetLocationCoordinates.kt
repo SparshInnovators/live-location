@@ -57,7 +57,7 @@ open class GetLocationCoordinates {
                                     permission
                                 )
                             ) {
-                                AlertDialog.Builder(context)
+                                AlertDialog.Builder(activity)
                                     .setTitle("Error")
                                     .setMessage("We need all the permissions")
                                     .setPositiveButton(
